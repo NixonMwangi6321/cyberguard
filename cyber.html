@@ -3,43 +3,292 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Security Website</title>
-  <link rel="stylesheet" href="cyber2.css">
+
+  <link rel="stylesheet" href="cyber.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
   <nav>
     <div class="navbar">
       <div class="logo">
         <!-- Placeholder for logo -->
-        <img src="logo.png" alt="Logo">
+        
       </div>
       <div class="navbar-left">
-        <a href="#" class="active">Home</a>
-        <a href="#">Malware</a>
-        <a href="#">Phishing</a>
-        <a href="#">Solution</a>
-        <a href="#">Market</a>
-        <a href="#">Training Events</a>
-      </div>
-      <div class="navbar-right">
-        <div class="dropdown">
-          <button class="dropbtn">&#8286;</button>
-          <div class="dropdown-content">
-            <a href="#">About Us</a>
-            <a href="#">Members Portfolio</a>
-            <a href="#">Contact</a>
-          </div>
-        </div>
+        <a href="#" class="active" onclick="loadContent('home')">Home</a>
+        <a href="#" onclick="loadContent('ourproduct')">Our Product</a>
+        <a href="#" onclick="loadContent('solution')">Solution</a>
+        <a href="#" onclick="loadContent('market')">Market</a>
+        <a href="#" onclick="loadContent('profile')"><i class="fas fa-user"></i> Our Profile</a>
+        
       </div>
     </div>
   </nav>
+  
+  
+<div class="progress-container">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
+<div class="content">
+  <section id="home" class="tab-content">
+    <h1 class="page-title">Cyber Security Attacks</h1>
+    <div class="message-box">
+      <h2>What is cyber Attack?</h2>
+      <p >A cyberattack is a malicious and deliberate attempt by an individual or organization to breach the information system of another individual or organization. Usually, the attacker seeks some type of benefit from disrupting the victim’s network.</p>
+      <br>
+      <br>
+      <p style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold;color: #333; line-height: 1.6;">Kenya has seen a rise in the frequency, scale, and sophistication of cyber attacks on its critical information infrastructure. In the period between July 2022 and June 2023, the National KE-CIRT/CC detected more than 855 million cyber threats, placing Kenya among the top three most targeted countries in the region. </p>
+      <br>
+      <h3><u>Sources of cyber threats</u></h3>
+      <br>
+      <div class="unique-links-container">
+      <ul>
+        <li><a href="#malware">Malware</a></li>
+        <li><a href="#phishing">Phishing </a></li>
+        <li><a href="#socialengineering">Social Engineering</a></li>
+        <li><a href="#denialofservice">Denial of Service</a></li>
+        <li><a href="#maninthemiddle">Man-in-the-middle</a></li>
+       
+        <!-- Add more articles as needed -->
+      </ul>
+    </div>
+    <br>
+    <h3><u>Common Sources of Cyber Threats</u></h3>
+    <p>Here are common sources of cyber threats against organisations</p>
+    <br>
+    <p><b>Cybercriminals:</b>These individuals or groups are primarily motivated by financial gain. They employ tactics such as phishing, ransomware, and malware to steal sensitive data, demand ransoms, or exploit organizational resources.</p>
+    <br>
+    <p><b>Nation_State Actors:</b>State-sponsored hackers often target organizations for espionage, intellectual property theft, or to disrupt operations. These attacks are typically sophisticated and well-funded, aiming to gather strategic information or sabotage critical infrastructure</p>
+    <br>
+    <p><b>Hacktivists:</b>These individuals or groups carry out attacks for ideological, political, or social reasons. They often aim to deface websites, leak sensitive information, or disrupt services to draw attention to their causes.</p>
+    <br>
+    <p><b>Third-Party Vendors and Supply Chain:</b>Vendors and suppliers with weak security measures can become entry points for attackers. Compromising these third parties can allow attackers to gain access to the primary organization’s systems and data.</p>
+    <br>
+    <p><b>Malicious insiders:</b>Insiders, such as current or former employees, contractors, or business partners, can pose significant threats. They might misuse their access to organizational systems and data intentionally or accidentally, leading to data breaches or other security incidents.</p>
+    <br>
+    <br>
+    <h3><u>Cyber Security Solutions </u></h3>
+    <br>
+    <p><b>Antivirus and Anti-Malware Software:</b>These programs detect, prevent, and remove malware, including viruses, worms, and Trojans. They offer real-time protection and regular system scans to identify and mitigate threats</p>
+    <br>
+    <p><b>Firewalls:<br></b><i>Network Firewalls:</i> <br>Act as a barrier between the internal network and external sources, monitoring and controlling incoming and outgoing network traffic based on security rules.<br>
+                                                 <i>Web Application Firewalls (WAF):</i><br> Protect web applications by filtering and monitoring HTTP traffic between a web application and the Internet</p>
+   <br>
+                                                 <p><b>Intrusion Detection and Prevention Systems (IDPS):</b><br><i>Intrusion Detection Systems (IDS): </i>Monitor network traffic for suspicious activity and known threats, alerting administrators when such activity is detected.<br><i>Intrusion Prevention Systems (IPS): </i><br>Similar to IDS but can also take action to prevent detected threats, such as blocking traffic or resetting connections.</p>   
+   <br>
+   <p><b>Encryption Solutions:</b><br><i>Data Encryption: </i><br>Encrypts data at rest and in transit to protect sensitive information from unauthorized access.<br><i>End-to-End Encryption: </i><br>Ensures that data is encrypted from the sender to the receiver, making it unreadable by third parties.</p>
+  <br>
+  <p><b>Cloud Security Solutions:</b>Protect cloud-based infrastructure, applications, and data. This includes cloud access security brokers (CASBs), secure web gateways (SWGs), and cloud workload protection platforms (CWPPs).</p>
+  <br>
+  <p><b>Security Awareness Training:</b>Programs designed to educate employees about the importance of cybersecurity, recognizing phishing attempts, safe internet practices, and how to handle sensitive information securely</p>
+  <br>
+  <p><b>Advanced Bot Protection –</b>Prevent business logic attacks from all access points – websites, mobile apps and APIs. Gain seamless visibility and control over bot traffic to stop online fraud through account takeover or competitive price scraping.</p> 
+  <br>
+  <br>
+  <br>
+  <p><b><u>Notable Cyber Attack Cases </u></b></p>
+  <br>
+  <P>Here are some notable cases of cyber attacks, illustrating the diversity and sophistication of modern cyber threats in Kenya and around the globe:</P>
+  <br>
+  <p><b>Distributed Denial of Service (DDoS) Attack in Kenya:</b>In July 2023, Kenya experienced a major DDoS attack that disrupted critical services for several hours. This attack affected the e-Citizen platform, M-Pesa, Kenya Power, and Kenya Railways, among others. The attack was believed to be orchestrated by a group called Anonymous Sudan.</p>
+  <br>
+  <p><b>Chinese Hackers Targeting Kenyan Agencies:</b>In May 2023, it was reported that Chinese hackers had targeted various Kenyan government agencies. These attacks were part of a broader pattern of cyber espionage aimed at extracting sensitive information</p>
+  <br>
+  <p><b>Twitter Bitcoin Scam (2020)</b>High-profile Twitter accounts were hijacked to promote a Bitcoin scam through social engineering techniques. This incident raised significant concerns about social media security and the potential for widespread misinformation campaigns​ </p>
+ <br>
+ <b>Colonial Pipeline Ransomware Attack (2021)</b>Conducted by the DarkSide group, this attack disrupted fuel supplies across the Eastern U.S. Colonial Pipeline shut down operations to contain the ransomware, highlighting critical vulnerabilities in infrastructure and prompting federal cybersecurity responses​ .</p>
+ <br>
+ <p><b>SolarWinds Supply Chain Attack (2020)</b>A sophisticated attack attributed to Russian state actors, it inserted malicious code into SolarWinds' Orion software, impacting numerous government agencies and major companies. The attack emphasized vulnerabilities in software supply chains​ </p>
+ <br>
+ <p><b>WannaCry Ransomware Attack (2017)</b>The WannaCry ransomware attack infected hundreds of thousands of computers globally, encrypting files and demanding a ransom in Bitcoin. It exploited the EternalBlue vulnerability in Windows, affecting major sectors including the UK's NHS, which suffered severe disruptions in healthcare services​ </p>
+</div>
+  </section>
+    <section id="ourproduct" class="tab-content">
+      <h2>Malware Detection Tool</h2>
+      <p>Still in the developmnt phase </p>
+      <div contenteditable="true">
+        Check in a few weeks time 
+      </div>
+    </section>
+    
 
-  <div class="content">
-    <!-- Content of your website goes here -->
-    <h1>Welcome to our Security Website!</h1>
-    <p>This is just a placeholder for your content.</p>
+    <section id="solution" class="tab-content">
+      <h2>Cyber Security Solutions</h2>
+      <div class="solutions-container">
+      <div class="solution-item">
+        <i class="fas fa-shield-virus solution-icon"></i>
+        <div class="solution-details">
+          <h3>Antivirus and Anti-Malware Software</h3>
+          <p>These programs detect, prevent, and remove malware, including viruses, worms, and Trojans. They offer real-time protection and regular system scans to identify and mitigate threats. Modern antivirus software also provides advanced features like behavior-based detection to identify new and unknown threats.</p>
+        </div>
+      </div>
+      
+      <div class="solution-item">
+        <i class="fas fa-shield-alt solution-icon"></i>
+        <div class="solution-details">
+          <h3>Firewalls</h3>
+          <p>Firewalls act as a barrier between the internal network and external sources, monitoring and controlling incoming and outgoing network traffic based on security rules. They can prevent unauthorized access to or from private networks and provide a layer of protection against various types of cyber attacks.</p>
+        </div>
+      </div>
+      
+      <div class="solution-item">
+        <i class="fas fa-lock solution-icon"></i>
+        <div class="solution-details">
+          <h3>Data Encryption</h3>
+          <p>Encryption transforms readable data into an unreadable format using algorithms and encryption keys. This ensures that sensitive information, whether stored (data at rest) or transmitted over networks (data in transit), remains secure and inaccessible to unauthorized users.</p>
+        </div>
+      </div>
+      
+      <div class="solution-item">
+        <i class="fas fa-cloud solution-icon"></i>
+        <div class="solution-details">
+          <h3>Cloud Security Solutions</h3>
+          <p>Cloud security involves protecting cloud-based infrastructure, applications, and data. Solutions include cloud access security brokers (CASBs), secure web gateways (SWGs), and cloud workload protection platforms (CWPPs) to ensure secure and compliant cloud usage.</p>
+        </div>
+      </div>
+      
+      <div class="solution-item">
+        <i class="fas fa-virus solution-icon"></i>
+        <div class="solution-details">
+          <h3>Virus Protection</h3>
+          <p>Virus protection is critical for maintaining data integrity and system functionality. This involves using specialized software to detect, quarantine, and remove viruses, ensuring they don't spread to other parts of the system or network.</p>
+        </div>
+      </div>
+      
+      <div class="solution-item">
+        <i class="fas fa-user-shield solution-icon"></i>
+        <div class="solution-details">
+          <h3>Identity and Access Management (IAM)</h3>
+          <p>IAM solutions manage and control user identities and their access to critical information within an organization. These solutions ensure that only authorized individuals can access specific resources, reducing the risk of data breaches.</p>
+        </div>
+      </div>
+
+      <div class="solution-item">
+        <i class="fas fa-user-secret solution-icon"></i>
+        <div class="solution-details">
+          <h3>Intrusion Detection Systems (IDS)</h3>
+          <p>IDS monitor network or system activities for malicious activities or policy violations. They provide detailed information about the types of attacks being attempted and can alert administrators to take appropriate action.</p>
+        </div>
+      </div>
+
+      <div class="solution-item">
+        <i class="fas fa-shield-check solution-icon"></i>
+        <div class="solution-details">
+          <h3>Security Information and Event Management (SIEM)</h3>
+          <p>SIEM systems collect and analyze security data from various sources across the network. They provide real-time analysis of security alerts generated by applications and network hardware, helping to detect and respond to potential threats more effectively.</p>
+        </div>
+      </div>
+    </section>
+
+
+    
+  
+    <section id="profile" class="tab-content">
+      <div class="main-content">
+        <div class="about-us-container">
+          <h2>About Us</h2>
+          <p>Welcome to our Cyber Security website. <br>We are dedicated to providing top-notch security solutions to protect your digital world.<br> Our team of experts works tirelessly to stay ahead of cyber threats and ensure your safety online.</p>
+        </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+        <div class="members">
+          <div class="member-card">
+            <img src="natasha.jpg" alt="Member 1">
+            <h3>Natasha Wangui</h3>
+            <p>Team Lead.</p>
+            <p>Data Analyst</p>
+          </div>
+          <div class="member-card">
+            <img src="collo.jpg" alt="Member 2">
+            <h3>Collins Mutugi</h3>
+            <p>Back end Designer</p>
+          </div>
+          <div class="member-card">
+            <img src="jedy.jpg" alt="Member 3">
+            <h3>Jeddy Awuor</h3>
+            <p>Market Researcher</p>
+          </div>
+          <div class="member-card">
+            <img src="becks.jpg" alt="Member 4">
+            <h3>Rebecca Akalwa</h3>
+            <p>Data Scientist</p>
+          </div>
+          <div class="member-card">
+            <img src="nixon.jpg" alt="Member 5">
+            <h3>Nixon Mwangi</h3>
+            <p>Front end Developer</p>
+          </div>          
+          <div class="member-card">
+            <img src="jjane.jpg" alt="Member 6">
+            <h3>Joyjane Githinji</h3>
+            <p>Front end Developer</p>
+          </div>
+        </div>
+
+        <div class="contact-info">
+          <h3>Contact Us</h3>
+          <p>Email: cyberguard@gmail.com</p>
+          <p>Phone: +254 718 452 611</p>
+          <p>Address: JKUAT, Scc, Kenya, 00100</p>
+        </div>
+      </div>
+    </section>
+
+  
   </div>
 
-  <script src="cyber2.js"></script>
+    <section id="market" class="tab-content">
+      <div class="market-message-box market-box">
+  <h2>Market for Our Cloud-Based Malware Detection Tool</h2>
+  
+  <h3>Public Organizations</h3>
+  <p>Government agencies, educational institutions, and healthcare providers are increasingly targeted by cyber threats. Our malware detection tool provides robust protection to ensure the safety of sensitive data and critical infrastructure.</p>
+  
+  <h3>Private Sector</h3>
+  <p>Businesses of all sizes, from small startups to large corporations, need reliable security solutions to protect their digital assets. Our tool offers scalable and efficient malware detection to prevent disruptions and data breaches.</p>
+  
+  <h3>Individuals</h3>
+  <p>With the rise of remote work and online activities, individuals are more vulnerable to cyber attacks. Our cloud-based solution provides comprehensive protection, ensuring peace of mind for personal devices and home networks.</p>
+  
+  <h3>Key Benefits</h3>
+  <ul>
+    <li>Real-time malware detection and alerts</li>
+    <li>Cloud-based solution for easy deployment and scalability</li>
+    <li>Advanced threat intelligence and analytics</li>
+    <li>User-friendly interface and management tools</li>
+    <li>Regular updates and continuous protection</li>
+  </ul>
+  
+  <p>By addressing the unique needs of these markets, our malware detection tool aims to provide top-notch security solutions that are both effective and accessible. Join us in the fight against cyber threats and ensure a safer digital environment for everyone.</p>
+ 
+        </div>
+    
+    </section>
+  
+  </div>
+</div>
+
+  <div class="news-box">
+    <h2>Latest Hacking Incidents</h2>
+    <div class="scrollable-content">
+    <ul>
+        <span id="date-display" class="date-display"></span>
+        <li><i class="fas fa-clock"></i> <strong>03:37:</strong> Ransomware at an electronic prescription provider in Australia.</li>
+        <li><i class="fas fa-clock"></i> <strong>21:45:</strong> School for sport commerce in France affected by cyber attack.</li>
+        <li><i class="fas fa-clock"></i> <strong>12:24:</strong> Airport in France affected by cyber attack.</li>
+        <li><i class="fas fa-clock"></i> <strong>19:03:</strong> Cyber incident at the US subsidiary of a Finnish manufacturer of household items.</li>
+        <li><i class="fas fa-clock"></i> <strong>11:04:</strong> DDoS attack on the website of a mass transit company in Washington, D.C.</li>
+        <li><i class="fas fa-clock"></i> <strong>10:46:</strong> Cyber attack on a university of applied sciences for police and administratio in Germany (February 13, 2024)</li>
+        <!-- Add more news cases as needed -->
+    </ul>
+  </div>
+  </div>
+  
+  
+  <script src="cyber.js"></script>
 </body>
 </html>

@@ -1,4 +1,35 @@
-.content-section {
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+h1, h2, h3 {
+  color: #007bff;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 1.75em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin: 0 0 1em;
+}.content-section {
   display: none;
 }
 
@@ -185,29 +216,6 @@ nav {
   text-align: center;
 }
 
-/* Unique Links Styles */
-.unique-links-container ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.unique-links-container li {
-  margin-bottom: 10px;
-}
-
-.unique-links-container a {
-  text-decoration: none;
-  color: #007bff;
-  font-weight: normal;
-  border-bottom: 1px solid transparent;
-  padding: 5px 10px;
-  transition: border-bottom-color 0.3s, color 0.3s;
-}
-
-.unique-links-container a:hover {
-  color: #ff0000;
-  border-bottom-color: #ff0000;
-}
 
 /* Scroll Progress Styles */
 .progress-container {
@@ -523,3 +531,37 @@ nav {
   font-size: 14px;
   line-height: 1.6;
 }
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 16px;
+  padding: 20px;
+  transition: transform 0.2s;
+  cursor: pointer;
+  overflow: hidden;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+.card-header {
+  display: flex;
+  align-items: center;
+}
+.card-header h2 {
+  flex: 1;
+  margin: 0;
+  font-size: 1.5em;
+}
+.card-header i {
+  margin-right: 10px;
+  font-size: 1.5em;
+  color: #007bff;
+}
+.hidden-content {
+  margin-top: 20px;
+  display: none;
+}
+.card p {
+  margin: 0;}

@@ -5,33 +5,216 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="cyber.css">
+<!--  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">-->
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+.lupita {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px; /* Add some padding from the left edge */
+}
+
+/* Text container */
+.text {
+   color: white;/* Optional: Limit the width of the content */
+   padding: 50px; /* Add some padding around the content */
+    border-radius: 10px; /* Optional: Rounded corners */
+    max-width: 600px;
+}
+
+/* Greeting text */
+.greeting {
+    font-size: larger;
+    color: white;
+}
+
+/* Highlight text */
+.highlight {
+    color: #ba8b00; /* Highlight color */
+}
+
+/* Wave image animation */
+.wave-img {
+    animation: wave 0.8s linear infinite;
+}
+
+/* Button styling */
+.button {
+    background-color: #ba8b00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #a37a00;
+}
+    .container {
+        display: flex;
+        margin: 20px; /* Use flexbox for layout */
+
+    }
+
+    .image-container {
+        flex: 1; /* Take up 50% of the container */
+       margin-right: 10px; /* Add margin between image and text area */
+    }
+
+    .image-container img {
+        max-width: 100%; /* Ensure the image does not exceed the container */
+        height: 450px; /* Maintain aspect ratio */
+        display: block; /* Remove any inline spacing */
+        margin: 0 auto; /* Center the image horizontally */
+    }
+
+    .text-container {
+        flex: 1; /* Take up 50% of the container */
+        padding: 20px; /* Add some padding for spacing */
+        box-sizing: border-box; /* Include padding in the width */
+        width: 300px;
+      background-color: #ffffff;
+
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      border-left: 2px solid #667379;
+
+    }
+
+    /* Responsive styling */
+     @media (max-width: 768px) {
+        .container {
+            flex-direction: column; /* Stack elements vertically on smaller screens */
+            margin: 10px; /* Adjust margin for smaller screens */
+        }
+        .image-container {
+            margin-right: 0; /* Remove margin between image and text area on smaller screens */
+        }
+        .text-container {
+            padding: 20px 0; /* Adjust padding for vertical layout */
+        }
+    }
+  </style>
 </head>
 <body>
   <nav>
     <div class="navbar">
       <div class="logo">
+       <img src="images/logo.png" alt=""width="100%" height="120 px">
+
+
         <!-- Placeholder for logo -->
-        
+
       </div>
       <div class="navbar-left">
+
         <a href="#" class="active" onclick="loadContent('home')">Home</a>
-        <a href="#" onclick="loadContent('ourproduct')">Our Product</a>
+        <a href="#" onclick="loadContent('FAQ')">Our Product</a>
         <a href="#" onclick="loadContent('solution')">Solution</a>
         <a href="#" onclick="loadContent('market')">Market</a>
         <a href="#" onclick="loadContent('profile')"><i class="fas fa-user"></i> Our Profile</a>
-        
+
       </div>
     </div>
   </nav>
-  
-  
-<div class="progress-container">
-  <div class="progress-bar" id="progressBar"></div>
+
+
+<!--<div class="progress-container">-->
+<!--  <div class="progress-bar" id="progressBar"></div>-->
+<!--</div>-->
+
+
+
+     <section id="home" class="tab-content">
+         <div style="background-image: url(images/bg.jpg) ;background-repeat: no-repeat; background-size: cover;" class="landing-page">
+
+  <div class="lupita">
+        <div class="text">
+
+
+            <p>Cybersecurity needs to be given top priority and incorporated into every stage of digitalization as we continue to connect the physical and digital realms. Cybersecurity dangers and attacks are becoming more complex and are affecting broader digital and geographical areas. There has never been a greater need for product cybersecurity and data quality.</p><br>
+            <a href="#about">
+                <button class="button">Let's get started</button>
+            </a>
+        </div>
+  </div></div>
+       <br><br><br>
+       <div class="container">
+    <div class="image-container">
+        <img src="images/robot.jpg" alt="">
+    </div>
+    <div class="text-container">
+      <br><br>
+        <h1 style="text-align: center"></h1>
+      <br><br>
+        <h4>In today’s connected world, everyone benefits from advanced cybersecurity solutions. At an individual level, a cybersecurity attack can result in everything from identity theft, to extortion attempts, to the loss of important data like family photos. Everyone relies on critical infrastructure like power plants, hospitals, and financial service companies. Securing these and other organizations is essential to keeping our society functioning.In order to improve cybersecurity, we need to shift from a capabilities-only mindset to one that is risk-based. This entails identifying, classifying, and focusing on particular categories of cyber risk—those that actually represent a risk to the entire organization in both the digital and physical domains—as well as implementing the appropriate cyber controls unique to each risk. Using real data to its fullest potential, the risk-based method quantifies and analyzes prospective cyber risks and countermeasures before a genuine attack materializes, modeling and refining solutions.</h4>
+    </div>
 </div>
+              <br><br>
+ <div class="gallery">
+  <div class="image-box">
+    <img src="images/threat.jpg" alt=""width="100%">
+    <div class="image-description"><b>Kenya has seen a rise in the frequency, scale, and sophistication of cyber attacks on its critical information infrastructure. In the period between July 2022 and June 2023, the National KE-CIRT/CC detected more than 855 million cyber threats, placing Kenya among the top three most targeted countries in the region.</b></div>
+  </div>
+  <div class="image-box">
+    <img src="images/industry.jpg" alt="" width="100%">
+    <div class="image-description"><b>Cybersecurity risks are a major concern for companies in many industries. Cyberattacks can result in a loss of money, reputation, operational disruptions, data breaches, and other undesirable outcomes. Finding potential dangers is the first step in stopping cyberattacks. The hazards on your list are primarily determined by the kinds of data you retain and your industry. Learn more about the sectors that are most frequently the target of cyberattacks, the risks these sectors face, data breach statistics, actual cyberattack cases, and the best strategies to thwart malevolent actors in your industry by continuing to read.</b></div>
+  </div>
+</div>
+ <div>
+   <h1 style="text-align: center;">Meet our cybersecurity analysts:</h1><br><br>
+ </div>
+        <div class="members">
+          <div class="member-card">
+            <img src="images/natasha.jpg" alt="Member 1">
+            <h3>Natasha Wangui</h3>
+            <p>Team Lead.</p>
+            <p>Data Analyst</p>
+          </div>
+          <div class="member-card">
+            <img src="images/collo.jpg" alt="Member 2">
+            <h3>Collins Mutugi</h3>
+            <p>Back end Designer</p>
+          </div>
+          <div class="member-card">
+            <img src="images/jedy.jpg" alt="Member 3">
+            <h3>Jeddy Awuor</h3>
+            <p>Market Researcher</p>
+          </div>
+          <div class="member-card">
+            <img src="images/becks.jpg" alt="Member 4">
+            <h3>Rebecca Akalwa</h3>
+            <p>Data Scientist</p>
+          </div>
+          <div class="member-card">
+            <img src="images/nixon.jpg" alt="Member 5">
+            <h3>Nixon Mwangi</h3>
+            <p>Front end Developer</p>
+          </div>
+          <div class="member-card">
+            <img src="images/jjane.jpg" alt="Member 6">
+            <h3>Joyjane Githinji</h3>
+            <p>Front end Developer</p>
+          </div>
+        </div>
+
+
+      </div>
+
+
+     </section>
+
+
 <div class="content">
-  <section id="home" class="tab-content">
+  <section id="FAQ" class="tab-content">
+
     <h1 class="page-title">Cyber Security Attacks</h1>
     <div class="message-box">
       <h2>What is cyber Attack?</h2>
@@ -49,7 +232,7 @@
         <li><a href="#socialengineering">Social Engineering</a></li>
         <li><a href="#denialofservice">Denial of Service</a></li>
         <li><a href="#maninthemiddle">Man-in-the-middle</a></li>
-       
+
         <!-- Add more articles as needed -->
       </ul>
     </div>
@@ -75,7 +258,7 @@
     <p><b>Firewalls:<br></b><i>Network Firewalls:</i> <br>Act as a barrier between the internal network and external sources, monitoring and controlling incoming and outgoing network traffic based on security rules.<br>
                                                  <i>Web Application Firewalls (WAF):</i><br> Protect web applications by filtering and monitoring HTTP traffic between a web application and the Internet</p>
    <br>
-                                                 <p><b>Intrusion Detection and Prevention Systems (IDPS):</b><br><i>Intrusion Detection Systems (IDS): </i>Monitor network traffic for suspicious activity and known threats, alerting administrators when such activity is detected.<br><i>Intrusion Prevention Systems (IPS): </i><br>Similar to IDS but can also take action to prevent detected threats, such as blocking traffic or resetting connections.</p>   
+                                                 <p><b>Intrusion Detection and Prevention Systems (IDPS):</b><br><i>Intrusion Detection Systems (IDS): </i>Monitor network traffic for suspicious activity and known threats, alerting administrators when such activity is detected.<br><i>Intrusion Prevention Systems (IPS): </i><br>Similar to IDS but can also take action to prevent detected threats, such as blocking traffic or resetting connections.</p>
    <br>
    <p><b>Encryption Solutions:</b><br><i>Data Encryption: </i><br>Encrypts data at rest and in transit to protect sensitive information from unauthorized access.<br><i>End-to-End Encryption: </i><br>Ensures that data is encrypted from the sender to the receiver, making it unreadable by third parties.</p>
   <br>
@@ -83,7 +266,7 @@
   <br>
   <p><b>Security Awareness Training:</b>Programs designed to educate employees about the importance of cybersecurity, recognizing phishing attempts, safe internet practices, and how to handle sensitive information securely</p>
   <br>
-  <p><b>Advanced Bot Protection –</b>Prevent business logic attacks from all access points – websites, mobile apps and APIs. Gain seamless visibility and control over bot traffic to stop online fraud through account takeover or competitive price scraping.</p> 
+  <p><b>Advanced Bot Protection –</b>Prevent business logic attacks from all access points – websites, mobile apps and APIs. Gain seamless visibility and control over bot traffic to stop online fraud through account takeover or competitive price scraping.</p>
   <br>
   <br>
   <br>
@@ -106,12 +289,12 @@
   </section>
     <section id="ourproduct" class="tab-content">
       <h2>Malware Detection Tool</h2>
-      <p>Still in the developmnt phase </p>
+      <p>Still in the developemnt phase </p>
       <div contenteditable="true">
-        Check in a few weeks time 
+        Check in a few weeks time
       </div>
     </section>
-    
+
 
     <section id="solution" class="tab-content">
       <h2>Cyber Security Solutions</h2>
@@ -123,7 +306,7 @@
           <p>These programs detect, prevent, and remove malware, including viruses, worms, and Trojans. They offer real-time protection and regular system scans to identify and mitigate threats. Modern antivirus software also provides advanced features like behavior-based detection to identify new and unknown threats.</p>
         </div>
       </div>
-      
+
       <div class="solution-item">
         <i class="fas fa-shield-alt solution-icon"></i>
         <div class="solution-details">
@@ -131,7 +314,7 @@
           <p>Firewalls act as a barrier between the internal network and external sources, monitoring and controlling incoming and outgoing network traffic based on security rules. They can prevent unauthorized access to or from private networks and provide a layer of protection against various types of cyber attacks.</p>
         </div>
       </div>
-      
+
       <div class="solution-item">
         <i class="fas fa-lock solution-icon"></i>
         <div class="solution-details">
@@ -139,7 +322,7 @@
           <p>Encryption transforms readable data into an unreadable format using algorithms and encryption keys. This ensures that sensitive information, whether stored (data at rest) or transmitted over networks (data in transit), remains secure and inaccessible to unauthorized users.</p>
         </div>
       </div>
-      
+
       <div class="solution-item">
         <i class="fas fa-cloud solution-icon"></i>
         <div class="solution-details">
@@ -147,7 +330,7 @@
           <p>Cloud security involves protecting cloud-based infrastructure, applications, and data. Solutions include cloud access security brokers (CASBs), secure web gateways (SWGs), and cloud workload protection platforms (CWPPs) to ensure secure and compliant cloud usage.</p>
         </div>
       </div>
-      
+
       <div class="solution-item">
         <i class="fas fa-virus solution-icon"></i>
         <div class="solution-details">
@@ -155,7 +338,7 @@
           <p>Virus protection is critical for maintaining data integrity and system functionality. This involves using specialized software to detect, quarantine, and remove viruses, ensuring they don't spread to other parts of the system or network.</p>
         </div>
       </div>
-      
+
       <div class="solution-item">
         <i class="fas fa-user-shield solution-icon"></i>
         <div class="solution-details">
@@ -179,11 +362,12 @@
           <p>SIEM systems collect and analyze security data from various sources across the network. They provide real-time analysis of security alerts generated by applications and network hardware, helping to detect and respond to potential threats more effectively.</p>
         </div>
       </div>
+      </div>
     </section>
 
 
-    
-  
+
+
     <section id="profile" class="tab-content">
       <div class="main-content">
         <div class="about-us-container">
@@ -197,33 +381,33 @@
 <br>
         <div class="members">
           <div class="member-card">
-            <img src="natasha.jpg" alt="Member 1">
+            <img src="images/natasha.jpg" alt="Member 1">
             <h3>Natasha Wangui</h3>
             <p>Team Lead.</p>
             <p>Data Analyst</p>
           </div>
           <div class="member-card">
-            <img src="collo.jpg" alt="Member 2">
+            <img src="images/collo.jpg" alt="Member 2">
             <h3>Collins Mutugi</h3>
             <p>Back end Designer</p>
           </div>
           <div class="member-card">
-            <img src="jedy.jpg" alt="Member 3">
+            <img src="images/jedy.jpg" alt="Member 3">
             <h3>Jeddy Awuor</h3>
             <p>Market Researcher</p>
           </div>
           <div class="member-card">
-            <img src="becks.jpg" alt="Member 4">
+            <img src="images/becks.jpg" alt="Member 4">
             <h3>Rebecca Akalwa</h3>
             <p>Data Scientist</p>
           </div>
           <div class="member-card">
-            <img src="nixon.jpg" alt="Member 5">
+            <img src="images/nixon.jpg" alt="Member 5">
             <h3>Nixon Mwangi</h3>
             <p>Front end Developer</p>
-          </div>          
+          </div>
           <div class="member-card">
-            <img src="jjane.jpg" alt="Member 6">
+            <img src="images/jjane.jpg" alt="Member 6">
             <h3>Joyjane Githinji</h3>
             <p>Front end Developer</p>
           </div>
@@ -238,22 +422,22 @@
       </div>
     </section>
 
-  
+
   </div>
 
     <section id="market" class="tab-content">
       <div class="market-message-box market-box">
   <h2>Market for Our Cloud-Based Malware Detection Tool</h2>
-  
+
   <h3>Public Organizations</h3>
   <p>Government agencies, educational institutions, and healthcare providers are increasingly targeted by cyber threats. Our malware detection tool provides robust protection to ensure the safety of sensitive data and critical infrastructure.</p>
-  
+
   <h3>Private Sector</h3>
   <p>Businesses of all sizes, from small startups to large corporations, need reliable security solutions to protect their digital assets. Our tool offers scalable and efficient malware detection to prevent disruptions and data breaches.</p>
-  
+
   <h3>Individuals</h3>
   <p>With the rise of remote work and online activities, individuals are more vulnerable to cyber attacks. Our cloud-based solution provides comprehensive protection, ensuring peace of mind for personal devices and home networks.</p>
-  
+
   <h3>Key Benefits</h3>
   <ul>
     <li>Real-time malware detection and alerts</li>
@@ -262,17 +446,18 @@
     <li>User-friendly interface and management tools</li>
     <li>Regular updates and continuous protection</li>
   </ul>
-  
+
   <p>By addressing the unique needs of these markets, our malware detection tool aims to provide top-notch security solutions that are both effective and accessible. Join us in the fight against cyber threats and ensure a safer digital environment for everyone.</p>
- 
+
         </div>
-    
+
     </section>
-  
+
   </div>
 </div>
 
-  <div class="news-box">
+  <div id="news-container" class="news-box">
+
     <h2>Latest Hacking Incidents</h2>
     <div class="scrollable-content">
     <ul>
@@ -287,8 +472,37 @@
     </ul>
   </div>
   </div>
-  
-  
+<script>
+  // Get the current section ID from the URL hash
+  function getCurrentSection() {
+    return window.location.hash.substring(1); // Remove '#' from the hash
+  }
+
+  // Function to show or hide the news box based on the current section
+  function toggleNewsBox() {
+    var currentSection = getCurrentSection();
+    var newsContainer = document.getElementById("news-container");
+
+    // Check if the current section is one where the news box should be displayed
+    if ((currentSection === "profile" || currentSection === "FAQ" || currentSection === "market")&& currentSection !== "home") {
+      newsContainer.style.display = "block"; // Show the news box
+    } else {
+      newsContainer.style.display = "none"; // Hide the news box
+    }
+  }
+
+  // Call the toggleNewsBox function when the page loads and when the hash changes
+   window.onload = function() {
+    toggleNewsBox();
+  };
+
+  // Call toggleNewsBox() when the hash (section identifier) changes
+  window.onhashchange = function() {
+    toggleNewsBox();
+  };
+</script>
+
   <script src="cyber.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

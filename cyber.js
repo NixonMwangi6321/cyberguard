@@ -178,12 +178,3 @@ function loadContent(tabName) {
     selectedSection.style.display = 'block';
   }
 }
-
-function toggleContent(card) {
-  const hiddenContent = card.querySelector('.hidden-content');
-  if (hiddenContent.style.display === 'none' || hiddenContent.style.display === '') {
-    hiddenContent.style.display = 'block';
-  } else {
-    hiddenContent.style.display = 'none';
-  }
-}

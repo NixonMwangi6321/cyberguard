@@ -40,10 +40,14 @@ p {
 }
 
 /* General Styles */
-.logo {
-  width: 90px;
-  height: auto;
-  margin-right: 10px;
+.navbar .logo {
+  flex: 0 0 auto; /* Do not allow the logo to grow or shrink */
+}
+
+
+.navbar .logo img {
+  height: 80px;
+  width: auto;  
 }
 
 .page-title {

@@ -661,3 +661,20 @@ nav {
 .event-card:hover .event-details {
   opacity: 1; /* Fully visible on hover */
 }
+
+/*new payment page css*/
+.payment-link {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.payment-link:hover {
+  background-color: #45a049; /* Darker green */
+}

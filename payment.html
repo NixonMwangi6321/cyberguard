@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="cyber.css">
+    <style>
+        .payment-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .payment-method {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .payment-method img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .event-details {
+            margin-top: 20px;
+        }
+
+        .event-details p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Payment Page</h1>
+    <div id="event-details" class="event-details"></div>
+    <div class="payment-methods">
+        <a href="https://paymentlink1.com" class="payment-method">
+            <img src="path/to/credit-card-icon.png" alt="Credit Card"> Pay via Credit Card
+        </a>
+        <a href="https://paymentlink2.com" class="payment-method">
+            <img src="path/to/paypal-icon.png" alt="PayPal"> Pay via PayPal
+        </a>
+        <a href="https://paymentlink3.com" class="payment-method">
+            <img src="path/to/bank-icon.png" alt="Bank Transfer"> Pay via Bank Transfer
+        </a>
+    </div>
+
+    <script>
+        // Function to get query parameters
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search.slice(1);
+            const queryArray = queryString.split('&');
+            queryArray.forEach(query => {
+                const [key, value] = query.split('=');
+                params[key] = decodeURIComponent(value.replace(/\+/g, ' '));
+            });
+            return params;
+        }
+
+        // Display event details
+        function displayEventDetails() {
+            const params = getQueryParams();
+            const eventDetails = document.getElementById('event-details');
+            eventDetails.innerHTML = `
+                <h2>${params.title}</h2>
+                <p><strong>Date:</strong> ${params.date}</p>
+                <p><strong>Time:</strong> ${params.time}</p>
+                <p><strong>Venue:</strong> ${params.venue}</p>
+                <p><strong>Guest Speaker:</strong> ${params.speaker}</p>
+                <p><strong>Objective:</strong> ${params.objective}</p>
+            `;
+        }
+
+        // Execute function on page load
+        window.onload = displayEventDetails;
+    </script>
+</body>
+</html>

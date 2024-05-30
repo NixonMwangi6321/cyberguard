@@ -45,7 +45,7 @@ function openTab(tabId) {
   tabContents.forEach(function(tab) {
     tab.style.display = 'none';
   });
-  
+
   // Show the selected tab content
   var selectedTab = document.getElementById(tabId);
   if (selectedTab) {
@@ -177,4 +177,28 @@ function loadContent(tabName) {
   if (selectedSection) {
     selectedSection.style.display = 'block';
   }
+}
+function toggleNewsBox(tabName) {
+    var newsContainer = document.getElementById("news-container");
+
+    // Check if the current page is one where the news box should be displayed
+    if (tabName === "FAQ" || tabName === "market"|| tabName === "solution") {
+        newsContainer.style.display = "block"; // Show the news box
+    } else {
+        newsContainer.style.display = "none"; // Hide the news box
+    }
+}
+function loadContent(tabName) {
+    // Hide all content sections
+    var contentSections = document.querySelectorAll('.content-section');
+    contentSections.forEach(function(section) {
+        section.style.display = 'none';
+    });
+
+    // Show the content section corresponding to the selected tab
+    var selectedSection = document.getElementById(tabName);
+    if (selectedSection) {
+        selectedSection.style.display = 'block';
+        toggleNewsBox(tabName); // Call toggleNewsBox() with the current tabName
+    }
 }

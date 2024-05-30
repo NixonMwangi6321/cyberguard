@@ -118,7 +118,7 @@ window.onload = function() {
 setInterval(updateDateDisplay, 1000);
 
 
-// cyber.js
+
 
 // Function to animate solution icons on hover
 document.addEventListener('DOMContentLoaded', function() {
@@ -178,27 +178,125 @@ function loadContent(tabName) {
     selectedSection.style.display = 'block';
   }
 }
-function toggleNewsBox(tabName) {
-    var newsContainer = document.getElementById("news-container");
 
-    // Check if the current page is one where the news box should be displayed
-    if (tabName === "FAQ" || tabName === "market"|| tabName === "solution") {
-        newsContainer.style.display = "block"; // Show the news box
-    } else {
-        newsContainer.style.display = "none"; // Hide the news box
-    }
+let currentlyOpenCard = null;
+
+function toggleContent(card) {
+  // Close the currently open card if it's different from the clicked card
+  if (currentlyOpenCard && currentlyOpenCard !== card) {
+    const currentlyOpenContent = currentlyOpenCard.querySelector('.hidden-content');
+    currentlyOpenContent.style.display = 'none';
+  }
+
+  const hiddenContent = card.querySelector('.hidden-content');
+  if (hiddenContent.style.display === 'block') {
+    hiddenContent.style.display = 'none';
+    currentlyOpenCard = null;  // No card is open now
+  } else {
+    hiddenContent.style.display = 'block';
+    currentlyOpenCard = card;  // Set the currently open card
+  }
 }
-function loadContent(tabName) {
-    // Hide all content sections
-    var contentSections = document.querySelectorAll('.content-section');
-    contentSections.forEach(function(section) {
-        section.style.display = 'none';
+//Event card JS
+
+document.addEventListener("DOMContentLoaded", function() {
+  const eventCards = document.querySelectorAll(".event-card");
+
+  eventCards.forEach(card => {
+    card.addEventListener("click", function() {
+      this.classList.toggle("open");
     });
+  });
+});
 
-    // Show the content section corresponding to the selected tab
-    var selectedSection = document.getElementById(tabName);
-    if (selectedSection) {
-        selectedSection.style.display = 'block';
-        toggleNewsBox(tabName); // Call toggleNewsBox() with the current tabName
-    }
+//JS for hiding newsbox over some tabs 
+
+// Function to handle tab navigation and content visibility, including conditional news box display
+function loadContent(tabId) {
+  const tabs = document.querySelectorAll('.tab-content');
+  const newsBox = document.getElementById('newsBox');
+
+  // Hide all tab contents
+  tabs.forEach(tab => {
+    tab.style.display = 'none';
+  });
+
+  // Show the selected tab
+  const selectedTab = document.getElementById(tabId);
+  if (selectedTab) {
+    selectedTab.style.display = 'block';
+  }
+
+  // Hide the news box on 'profile' and 'events' tabs, show on others
+  if (tabId === 'profile' || tabId === 'events') {
+    newsBox.style.display = 'none';
+  } else {
+    newsBox.style.display = 'block';
+  }
 }
+
+// Set up event listeners for DOM content loaded
+document.addEventListener("DOMContentLoaded", function() {
+  // Initialize the default tab and setup links for navigation
+  loadContent('home');  // Load the home tab by default
+
+  const navLinks = document.querySelectorAll('.navbar-left a, .navbar-right a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const tabId = this.getAttribute('href').replace('#', '');
+      loadContent(tabId);
+    });
+  });
+});
+// Function to handle tab navigation
+function openTab(tabId) {
+  // Hide all tab contents
+  var tabContents = document.querySelectorAll('.tab-content');
+  tabContents.forEach(function(tab) {
+    tab.style.display = 'none';
+  });
+  
+  // Show the selected tab content
+  var selectedTab = document.getElementById(tabId);
+  if (selectedTab) {
+    selectedTab.style.display = 'block';
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }
+}
+
+// Initial tab to show
+openTab('home');
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Function to handle tab navigation
+  const navLinks = document.querySelectorAll('.navbar-left a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent the default anchor link behavior
+      const targetId = this.getAttribute('onclick').match(/\(([^)]+)\)/)[1].replace(/'/g, '');
+      openTab(targetId); // Show the clicked tab and scroll to the top
+    });
+  });
+
+  // Dropdown toggle
+  const dropdownToggle = document.querySelector('.dropdown .dropbtn');
+  const dropdownMenu = document.querySelector('.dropdown .dropdown-content');
+  dropdownToggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+  });
+
+  // Hide dropdown menu when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+      dropdownMenu.style.display = 'none';
+    }
+  });
+});
+
+// Reset scroll position when navigating between tabs using browser history
+window.addEventListener('popstate', function(event) {
+  window.scrollTo(0, 0);
+});
+

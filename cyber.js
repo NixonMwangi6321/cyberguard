@@ -45,7 +45,7 @@ function openTab(tabId) {
   tabContents.forEach(function(tab) {
     tab.style.display = 'none';
   });
-  
+
   // Show the selected tab content
   var selectedTab = document.getElementById(tabId);
   if (selectedTab) {
@@ -178,6 +178,7 @@ function loadContent(tabName) {
     selectedSection.style.display = 'block';
   }
 }
+
 let currentlyOpenCard = null;
 
 function toggleContent(card) {
@@ -298,3 +299,4 @@ document.addEventListener("DOMContentLoaded", function() {
 window.addEventListener('popstate', function(event) {
   window.scrollTo(0, 0);
 });
+

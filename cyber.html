@@ -1,226 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="cyber.css">
-<!--  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">-->
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <style>
-.lupita {
-    height: 100vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 20px; /* Add some padding from the left edge */
-}
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-/* Text container */
-.text {
-   color: white;/* Optional: Limit the width of the content */
-   padding: 50px; /* Add some padding around the content */
-    border-radius: 10px; /* Optional: Rounded corners */
-    max-width: 600px;
-}
-
-/* Greeting text */
-
-
-/* Highlight text */
-.highlight {
-    color: #ba8b00; /* Highlight color */
-}
-
-/* Wave image animation */
-.wave-img {
-    animation: wave 0.8s linear infinite;
-}
-
-/* Button styling */
-.button {
-    background-color: #ba8b00;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: #a37a00;
-}
-    .container {
-        display: flex;
-        margin: 20px; /* Use flexbox for layout */
-
-    }
-
-    .image-container {
-        flex:0.6; /* Take up 50% of the container */
-       margin-right: 10px; /* Add margin between image and text area */
-    }
-
-    .image-container img {
-        max-width: 100%; /* Ensure the image does not exceed the container */
-        height: 450px; /* Maintain aspect ratio */
-        display: block; /* Remove any inline spacing */
-        margin: 0 auto; /* Center the image horizontally */
-    }
-
-    .text-container {
-        flex: 1; /* Take up 50% of the container */
-        padding: 20px; /* Add some padding for spacing */
-        box-sizing: border-box; /* Include padding in the width */
-        width: 300px;
-      background-color: #100f0f;
-color: #cec5c5;
-      font-size: large;
-  border-radius: 5px;
-  /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/
-      /*border-left: 2px solid #667379;*/
-
-    }
-
-    /* Responsive styling */
-     @media (max-width: 768px) {
-        .container {
-            flex-direction: column; /* Stack elements vertically on smaller screens */
-            margin: 10px; /* Adjust margin for smaller screens */
-        }
-        .image-container {
-            margin-right: 0; /* Remove margin between image and text area on smaller screens */
-        }
-        .text-container {
-            padding: 20px 0; /* Adjust padding for vertical layout */
-        }
-    }
-  </style>
+  <link rel="icon" href="images/img_2.png">
+    <link rel="stylesheet" href="cyber.css">
 </head>
-<body>
+
+<body class="dark-theme">
+
+  <!-- Theme Toggle Button -->
+
   <nav>
+
     <div class="navbar">
       <div class="logo">
+        <img src="images/logo.png" alt="" width="230" height="40" class="logo-image">
       </div>
       <div class="navbar-left">
 
         <a href="#" class="active" onclick="loadContent('home')">Home</a>
-        <a href="#" onclick="loadContent('ourproduct')">Our Product</a>
+        <a href="#" onclick="loadContent('learn')">Learn</a>
         <a href="#" onclick="loadContent('solution')">Solution</a>
-        <a href="#" onclick="loadContent('market')">Market</a>
+        <a href="#" onclick="loadContent('strategies')">Strategies</a>
         <a href="#" onclick="loadContent('events')">Events</a>
 
         <a href="#" onclick="loadContent('profile')"><i class="fas fa-user"></i> Our Profile</a>
-
+    <div class="theme-switch-icon" id="theme-switch"></div>
       </div>
     </div>
   </nav>
 
 
-<!--<div class="progress-container">-->
-<!--  <div class="progress-bar" id="progressBar"></div>-->
-<!--</div>-->
+<div class="progress-container">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
 
 
 
-     <section id="home" class="tab-content">
+     <section style="height: 150vh" id="home" class="tab-content">
          <div style="background-image: url(images/bg.jpg) ;background-repeat: no-repeat; background-size: cover;" class="landing-page">
 
-  <div class="lupita">
+  <div class="home">
         <div class="text">
 
 
             <p>Cybersecurity needs to be given top priority and incorporated into every stage of digitalization as we continue to connect the physical and digital realms.The intricacy of cybersecurity hazards and breaches keeps growing, expanding into more expansive virtual and physical domains. There has never been a more significant need for product cybersecurity and data quality. </p><br>
-            <a href="#about">
+            <a href="#learn">
                 <button class="button">Let's get started</button>
             </a>
+
         </div>
   </div></div>
-       <br><br><br>
+       <br>
+         <div class="portion">
        <div class="container">
-    <div class="image-container">
-        <img src="images/robot.png" alt="">
-    </div>
+
     <div class="text-container">
-      <br><br>
-        <h1 style="text-align: center;color: #2cbdac">
-          What Cybersecurity means to us
-        </h1>
-      <br><br>
-        <h4>In today’s connected world, everyone benefits from advanced cybersecurity solutions. At an individual level, a cybersecurity attack can result in everything from identity theft, to extortion attempts, to the loss of important data like family photos. Everyone relies on critical infrastructure like power plants, hospitals, and financial service companies. Securing these and other organizations is essential to keeping our society functioning.</h4>
-      <a style="color:#2cbdac;" href="">To stay ahead of risk, our cybersecurity research enables constant innovation and adaptation.</a>
+      <br>
+       <h3 class="heading">
+      What Cybersecurity means to us
+    </h3>
+      <br>
+        <p>In today’s connected world, everyone benefits from advanced cybersecurity solutions. At an individual level, a cybersecurity attack can result in everything from identity theft, to extortion attempts, to the loss of important data like family photos. Everyone relies on critical infrastructure like power plants, hospitals, and financial service companies. Securing these and other organizations is essential to keeping our society functioning.</p>
+
+      <a href="">To stay ahead of risk, our cybersecurity research enables constant innovation and adaptation.</a>
     </div>
+
 </div>
-              <br><br>
+       <br>
+       <div class="strategy">
+      <h3 style="text-align: center" class="heading">
+     Strategies and policies
+    </h3>
+              <p>The Republic of Kenya recognizes cyberspace as
+a new strategic high ground in the envisioned fifth
+industrial revolution that represent much more
+advanced collaborative interactions between
+humans, machines, processes and systems. Driven
+by increased connectivity and wide adoption of
+digital technologies, cyberspace has become the
+new nervous system supporting the functioning
+and delivery of services to citizens by Kenyan
+Government and businesses.In enhancing cyber resilience and providing a robust defense against cyber threats in Kenya,our findings from our analysis will be instrumental in shaping targeted cybersecurity strategies, policies, and interventions. </p>
+
+</div>
+         </div>
+
  <div class="gallery">
   <div class="image-box">
     <img src="images/threat.jpg" alt=""width="100%">
     <div class="image-description"><b>Kenya has seen a rise in the frequency, scale, and sophistication of cyber attacks on its critical information infrastructure. In the period between July 2022 and June 2023, the National KE-CIRT/CC detected more than 855 million cyber threats, placing Kenya among the top three most targeted countries in the region.</b></div>
+    <br>
+       <a href="#" onclick="loadContent('learn')">
+                <button class="button">Learn more</button>
+            </a>
+
   </div>
   <div class="image-box">
     <img src="images/industry.jpg" alt="" width="100%">
+
     <div class="image-description"><b>Cybersecurity risks are a major concern for companies in many industries. Learn more about the sectors that are most frequently the target of cyberattacks, the risks these sectors face, data breach statistics, actual cyberattack cases, and the best strategies to thwart malevolent actors in your industry by continuing to read.</b></div>
+
+    <br>
+    <a href="#" onclick="loadContent('learn')">
+                <button class="button">Learn more</button>
+            </a>
   </div>
-</div>
- <div>
-   <h1 style="text-align: center;">Meet our cybersecurity analysts:</h1><br><br>
- </div>
-        <div class="members">
-          <div class="member-card">
-            <img src="images/natasha.jpg" alt="Member 1">
-            <h3>Natasha Wangui</h3>
-            <p>Team Lead.</p>
+       </div>
+
+
+          <br>
+
+         <div class="analysts">
+              <h3 style="text-align: center;" class="heading">Meet our cybersecurity analysts</h3>
+             <p>Meet our expert cybersecurity analysts, dedicated to safeguarding your digital assets with cutting-edge solutions and proactive strategies.
+               They leverage advanced technologies and deep industry knowledge to protect your organization from evolving cyber threats.
+                   They leverage advanced technologies and deep industry knowledge to protect your organization from evolving cyber threats.</p>
+         </div>
+         <br>
+         <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-flex justify-content-between">
+                  <div class="borderline">
+                     <img src="images/natasha.jpg" class="d-block w-30" alt="Image 1">
+           <h3>Natasha Wangui</h3>
             <p>Data Analyst</p>
-          </div>
-          <div class="member-card">
-            <img src="images/collo.jpg" alt="Member 2">
-            <h3>Collins Mutugi</h3>
-            <p>Back end Designer</p>
-          </div>
-          <div class="member-card">
-            <img src="images/jedy.jpg" alt="Member 3">
-            <h3>Jeddy Awuor</h3>
-            <p>Market Researcher</p>
-          </div>
-          <div class="member-card">
-            <img src="images/becks.jpg" alt="Member 4">
-            <h3>Rebecca Akalwa</h3>
-            <p>Data Scientist</p>
-          </div>
-          <div class="member-card">
-            <img src="images/nixon.jpg" alt="Member 5">
-            <h3>Nixon Mwangi</h3>
-            <p>Front end Developer</p>
-          </div>
-          <div class="member-card">
-            <img src="images/jjane.jpg" alt="Member 6">
-            <h3>Joyjane Githinji</h3>
-            <p>Front end Developer</p>
-          </div>
+              </div>
+                <div class="borderline">
+                    <img src="images/collo.jpg" class="d-block w-30" alt="Image 2">
+                  <h3>Collins Mutugi</h3>
+                    <p>Back end Designer</p>
+                </div>
+            <div class="borderline">
+                <img src="images/becks.jpg" class="d-block w-30" alt="Image 2">
+                    <h3>Rebecca Akalwa</h3>
+                    <p>Data Scientist</p>
+            </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="d-flex justify-content-between">
+
+             <div class="borderline">
+                <img src="images/jedy.jpg" class="d-block w-30" alt="Image 2">
+                 <h3>Jeddy Awuor</h3>
+                <p>Market Researcher</p>
         </div>
 
 
+         <div class="borderline">
+                <img src="images/nixon.jpg" class="d-block w-30" alt="Image 2">
+       <h3>Nixon Mwangi</h3>
+        <p>Front end Developer</p>
+        </div>
+                <div class="borderline">
+                 <img src="images/jjane.jpg" class="d-block w-30" alt="Image 2">
+        <h3>Joyjane Githinji</h3>
+        <p>Front end Developer</p>
+        </div>
+            </div>
+        </div>
+    </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+         <br><br><br>
+         <footer class="footer">
+        <div class="footer-container">
+      <div class="footer-section contact">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:support@example.com">support@example.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+123-456-7890</a></p>
+        <p>Address: 123 Example Street, City, Country</p>
       </div>
+      <div class="footer-section support">
+        <h3>Support Us</h3>
+        <p>Our work relies on you!</p>
 
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/company/jhubafrica/?originalSubdomain=ke" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
 
+      </div>
+    </div>
+    </footer>
      </section>
 
 
 <div class="content">
-  <section id="FAQ" class="tab-content">
+  <section id="learn" class="tab-content">
 
-    <h1 class="page-title">Cyber Security Attacks</h1>
     <div class="message-box">
+       <h1 style="color: #007bff" class="page-title">Cyber Security Attacks</h1>
       <h2>What is cyber Attack?</h2>
       <p >A cyberattack is a malicious and deliberate attempt by an individual or organization to breach the information system of another individual or organization. Usually, the attacker seeks some type of benefit from disrupting the victim’s network.</p>
       <br>
       <br>
-      <p style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold;color: #333; line-height: 1.6;">Kenya has seen a rise in the frequency, scale, and sophistication of cyber attacks on its critical information infrastructure. In the period between July 2022 and June 2023, the National KE-CIRT/CC detected more than 855 million cyber threats, placing Kenya among the top three most targeted countries in the region. </p>
+      <p style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold;color: white; line-height: 1.6;">Kenya has seen a rise in the frequency, scale, and sophistication of cyber attacks on its critical information infrastructure. In the period between July 2022 and June 2023, the National KE-CIRT/CC detected more than 855 million cyber threats, placing Kenya among the top three most targeted countries in the region. </p>
       <br>
       <h3><u>Sources of cyber threats</u></h3>
       <br>
@@ -329,8 +328,23 @@ color: #cec5c5;
  <br>
  <p><b>WannaCry Ransomware Attack (2017)</b>The WannaCry ransomware attack infected hundreds of thousands of computers globally, encrypting files and demanding a ransom in Bitcoin. It exploited the EternalBlue vulnerability in Windows, affecting major sectors including the UK's NHS, which suffered severe disruptions in healthcare services​ </p>
 </div>
+              <div class="news-box">
+  <h2>Latest Hacking Incidents</h2>
+  <div class="scrollable-content">
+    <ul>
+      <span class="date-display">June 4,2024</span>
+      <li><i class="fas fa-clock"></i> <strong>03:37:</strong> Ransomware at an electronic prescription provider in Australia.</li>
+      <li><i class="fas fa-clock"></i> <strong>21:45:</strong> School for sport commerce in France affected by cyber attack.</li>
+      <li><i class="fas fa-clock"></i> <strong>12:24:</strong> Airport in France affected by cyber attack.</li>
+      <li><i class="fas fa-clock"></i> <strong>19:03:</strong> Cyber incident at the US subsidiary of a Finnish manufacturer of household items.</li>
+      <li><i class="fas fa-clock"></i> <strong>11:04:</strong> DDoS attack on the website of a mass transit company in Washington, D.C.</li>
+      <li><i class="fas fa-clock"></i> <strong>10:46:</strong> Cyber attack on a university of applied sciences for police and administratio in Germany (February 13, 2024)</li>
+      <!-- Add more news cases as needed -->
+    </ul>
+  </div>
+</div>
   </section>
-    <section id="ourproduct" class="tab-content">
+    <section id="strategies" class="tab-content">
       <h2>Malware Detection Tool</h2>
 
       <p>Still in the developemnt phase </p>
@@ -338,6 +352,21 @@ color: #cec5c5;
       <div contenteditable="true">
         Check in a few weeks time
       </div>
+          <div  class="news-box">
+  <h2>Latest Hacking Incidents</h2>
+  <div class="scrollable-content">
+    <ul>
+      <span  class="date-display">June 4,2024</span>
+      <li><i class="fas fa-clock"></i> <strong>03:37:</strong> Ransomware at an electronic prescription provider in Australia.</li>
+      <li><i class="fas fa-clock"></i> <strong>21:45:</strong> School for sport commerce in France affected by cyber attack.</li>
+      <li><i class="fas fa-clock"></i> <strong>12:24:</strong> Airport in France affected by cyber attack.</li>
+      <li><i class="fas fa-clock"></i> <strong>19:03:</strong> Cyber incident at the US subsidiary of a Finnish manufacturer of household items.</li>
+      <li><i class="fas fa-clock"></i> <strong>11:04:</strong> DDoS attack on the website of a mass transit company in Washington, D.C.</li>
+      <li><i class="fas fa-clock"></i> <strong>10:46:</strong> Cyber attack on a university of applied sciences for police and administratio in Germany (February 13, 2024)</li>
+      <!-- Add more news cases as needed -->
+    </ul>
+  </div>
+</div>
     </section>
 
 
@@ -408,6 +437,21 @@ color: #cec5c5;
         </div>
       </div>
       </div>
+          <div id="news-container" class="news-box">
+  <h2>Latest Hacking Incidents</h2>
+  <div class="scrollable-content">
+    <ul>
+      <span class="date-display">June 4,2024</span>
+      <li><i class="fas fa-clock"></i> <strong>03:37:</strong> Ransomware at an electronic prescription provider in Australia.</li>
+      <li><i class="fas fa-clock"></i> <strong>21:45:</strong> School for sport commerce in France affected by cyber attack.</li>
+      <li><i class="fas fa-clock"></i> <strong>12:24:</strong> Airport in France affected by cyber attack.</li>
+      <li><i class="fas fa-clock"></i> <strong>19:03:</strong> Cyber incident at the US subsidiary of a Finnish manufacturer of household items.</li>
+      <li><i class="fas fa-clock"></i> <strong>11:04:</strong> DDoS attack on the website of a mass transit company in Washington, D.C.</li>
+      <li><i class="fas fa-clock"></i> <strong>10:46:</strong> Cyber attack on a university of applied sciences for police and administratio in Germany (February 13, 2024)</li>
+      <!-- Add more news cases as needed -->
+    </ul>
+  </div>
+</div>
     </section>
 
 
@@ -476,10 +520,26 @@ color: #cec5c5;
           <p>Address: JKUAT, Scc, Kenya, 00100</p>
         </div>
       </div>
+          <div class="news-box">
+  <h2>Latest Hacking Incidents</h2>
+  <div class="scrollable-content">
+    <ul>
+      <span class="date-display">June 4,2024</span>
+      <li><i class="fas fa-clock"></i> <strong>03:37:</strong> Ransomware at an electronic prescription provider in Australia.</li>
+      <li><i class="fas fa-clock"></i> <strong>21:45:</strong> School for sport commerce in France affected by cyber attack.</li>
+      <li><i class="fas fa-clock"></i> <strong>12:24:</strong> Airport in France affected by cyber attack.</li>
+      <li><i class="fas fa-clock"></i> <strong>19:03:</strong> Cyber incident at the US subsidiary of a Finnish manufacturer of household items.</li>
+      <li><i class="fas fa-clock"></i> <strong>11:04:</strong> DDoS attack on the website of a mass transit company in Washington, D.C.</li>
+      <li><i class="fas fa-clock"></i> <strong>10:46:</strong> Cyber attack on a university of applied sciences for police and administratio in Germany (February 13, 2024)</li>
+      <!-- Add more news cases as needed -->
+    </ul>
+  </div>
+</div>
     </section>
 
 
     <section id="market" class="tab-content">
+
       <div class="market-message-box market-box">
         <h2>Market for Our Cloud-Based Malware Detection Tool</h2>
         <h3>Public Organizations</h3>
@@ -498,11 +558,17 @@ color: #cec5c5;
         </ul>
         <p>By addressing the unique needs of these markets, our malware detection tool aims to provide top-notch security solutions that are both effective and accessible. Join us in the fight against cyber threats and ensure a safer digital environment for everyone.</p>
       </div>
-      </section>
-  
-    
+
+</section>
+
+
+
+
+
 
 <section id="events" class="tab-content">
+
+
   <div class="event-cards">
     <div class="event-card">
       <div class="event-header">
@@ -574,44 +640,46 @@ color: #cec5c5;
       </div>
     </div>
   </div>
-</section>
-  <div class="news-box">
-
-    <h2>Latest Hacking Incidents</h2>
-    <div class="scrollable-content">
+      <div class="news-box">
+  <h2>Latest Hacking Incidents</h2>
+  <div class="scrollable-content">
     <ul>
-        <span id="date-display" class="date-display"></span>
-        <li><i class="fas fa-clock"></i> <strong>03:37:</strong> Ransomware at an electronic prescription provider in Australia.</li>
-        <li><i class="fas fa-clock"></i> <strong>21:45:</strong> School for sport commerce in France affected by cyber attack.</li>
-        <li><i class="fas fa-clock"></i> <strong>12:24:</strong> Airport in France affected by cyber attack.</li>
-        <li><i class="fas fa-clock"></i> <strong>19:03:</strong> Cyber incident at the US subsidiary of a Finnish manufacturer of household items.</li>
-        <li><i class="fas fa-clock"></i> <strong>11:04:</strong> DDoS attack on the website of a mass transit company in Washington, D.C.</li>
-        <li><i class="fas fa-clock"></i> <strong>10:46:</strong> Cyber attack on a university of applied sciences for police and administratio in Germany (February 13, 2024)</li>
-        <!-- Add more news cases as needed -->
+      <span id="date-display" class="date-display">June 4,2024</span>
+      <li><i class="fas fa-clock"></i> <strong>03:37:</strong> Ransomware at an electronic prescription provider in Australia.</li>
+      <li><i class="fas fa-clock"></i> <strong>21:45:</strong> School for sport commerce in France affected by cyber attack.</li>
+      <li><i class="fas fa-clock"></i> <strong>12:24:</strong> Airport in France affected by cyber attack.</li>
+      <li><i class="fas fa-clock"></i> <strong>19:03:</strong> Cyber incident at the US subsidiary of a Finnish manufacturer of household items.</li>
+      <li><i class="fas fa-clock"></i> <strong>11:04:</strong> DDoS attack on the website of a mass transit company in Washington, D.C.</li>
+      <li><i class="fas fa-clock"></i> <strong>10:46:</strong> Cyber attack on a university of applied sciences for police and administratio in Germany (February 13, 2024)</li>
+      <!-- Add more news cases as needed -->
     </ul>
   </div>
-  </div>
-<script>
-  // Get the current section ID from the URL hash
-  function getCurrentSection() {
-    return window.location.hash.substring(1); // Remove '#' from the hash
-  }
+</div>
+</section>
 
-  // Function to show or hide the news box based on the current section
+
+
+  <script>
+
+  // Get the current section ID from the URL hash
+
+
+
+  // Get the current section ID from the URL hash// JavaScript function to determine if the news box should be displayed
   function toggleNewsBox() {
-    var currentSection = getCurrentSection();
+    var currentSection = window.location.hash.substring(1); // Get the section identifier (e.g., "home", "ourproduct", etc.)
     var newsContainer = document.getElementById("news-container");
 
     // Check if the current section is one where the news box should be displayed
-    if ((currentSection === "profile" || currentSection === "FAQ" || currentSection === "market")&& currentSection !== "home") {
+    if (currentSection === "home" || currentSection === "ourproduct" || currentSection === "market") {
       newsContainer.style.display = "block"; // Show the news box
     } else {
       newsContainer.style.display = "none"; // Hide the news box
     }
   }
 
-  // Call the toggleNewsBox function when the page loads and when the hash changes
-   window.onload = function() {
+  // Call toggleNewsBox() when the page loads and when the hash changes
+  window.onload = function() {
     toggleNewsBox();
   };
 
@@ -620,6 +688,17 @@ color: #cec5c5;
     toggleNewsBox();
   };
 </script>
+
+
+
+
+
+
+<!--js for carousel-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
   <script src="cyber.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

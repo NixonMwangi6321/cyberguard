@@ -292,31 +292,6 @@ nav {
   width: 0%;
 }
 
-/* Content of the Page */
-.content {
-  padding: 20px;
-  padding-top: 80px;
-  height: 2000px;
-}
-
-
-.malware-page .message-box {
-  background-color: #f1f1f1;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Transparent shadow */
-  margin: 20px;
-}
-
-.malware-page .message-box h2 {
-  margin-top: 0;
-}
-
-.malware-page .message-box p {
-  margin-bottom: 0;
-}
-
-/* cyber.css */
 
 /* General styles */
 body {
@@ -345,25 +320,6 @@ nav {
   margin: 0 10px;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 
 .progress-container {
   height: 5px;
@@ -399,7 +355,7 @@ nav {
   transition: transform 0.3s;
 }
 
-/* Solution icon */
+
 .solution-icon {
   font-size: 36px;
   color: #007bff; /* Blue color */
@@ -407,25 +363,25 @@ nav {
   transition: transform 0.3s, color 0.3s;
 }
 
-/* Solution details */
+
 .solution-details {
   flex-grow: 1;
 }
 
-/* Solution title */
+
 .solution-details h3 {
   font-size: 24px;
   margin-bottom: 10px;
   color: #007bff;
 }
 
-/* Solution description */
+
 .solution-details p {
   font-size: 16px;
   color: #ffffff;
 }
 
-/* Animations */
+
 .solution-icon:hover {
   transform: scale(1.2);
   cursor: pointer;
@@ -664,7 +620,7 @@ nav {
 .event-card:hover .event-details {
   opacity: 1; /* Fully visible on hover */
 }
-=======
+
    .gallery {
     display: flex;
     justify-content: space-between;

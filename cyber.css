@@ -977,15 +977,15 @@ text-align: center;color: #007bff
 .light-theme .carousel{
   background-color: white;
 }
-.light-theme.news-box li:nth-child(odd) {
+.light-theme .news-box li:nth-child(odd) {
 
   background-color: #e5bdc0;
 }
-.light-theme.news-box li:nth-child(even){
+.light-theme .news-box li:nth-child(even){
   background-color: #e3d9da;
 }
 
-.light-theme.date-display {
+.light-theme .date-display {
   background-color: #cc5861;
 
 
@@ -998,19 +998,7 @@ text-align: center;color: #007bff
   color: white;
 }
 
-/* Visible button */
-.theme-toggle {
-  /*!*position: fixed;*!*/
-  /*!*top: 1rem;*!*/
-  /*!*right: 1rem;*!*/
 
-  /*cursor: pointer;*/
-  /*!*transition: background-color 0.3s ease;*!*/
-  /*!*z-index: 1000; !* Ensure it appears above other elements *!*!*/
-}
-/*.theme-toggle:hover {*/
-/*  background-color: #FFC107;*/
-/*}*/
 .light-theme .borderline {
   background-color: #f9f9f9;
  color: #333333;
@@ -1027,7 +1015,7 @@ text-align: center;color: #007bff
 }        .theme-switch-icon {
             width: 30px;
             height: 30px;
-          background: linear-gradient(to bottom right, #ffd700, #ffff00);
+          background: linear-gradient(to bottom right, #ffd700,#a37a00);
             border-radius: 50%;
             display: flex;
             justify-content: center;

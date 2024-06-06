@@ -23,7 +23,7 @@ h3 {
 .card-header h6 {
   margin: 0;
   font-size: 18px;
-  color: #333;
+  color: #3007b6;
 }
 
 
@@ -250,31 +250,6 @@ nav {
   margin-bottom: 10px;
   text-align: center;
 }
-
-/* Unique Links Styles */
-.unique-links-container ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.unique-links-container li {
-  margin-bottom: 10px;
-}
-
-.unique-links-container a {
-  text-decoration: none;
-  color: #007bff;
-  font-weight: normal;
-  border-bottom: 1px solid transparent;
-  padding: 5px 10px;
-  transition: border-bottom-color 0.3s, color 0.3s;
-}
-
-.unique-links-container a:hover {
-  color: #ff0000;
-  border-bottom-color: #ff0000;
-}
-
 /* Scroll Progress Styles */
 .progress-container {
   position: fixed;
@@ -532,7 +507,7 @@ nav {
 .contact-info {
   margin-top: 30px;
   padding: 20px;
-  background-color: #424242; /* Lighter gray for contact info area */
+  background-color: #100202; /* Lighter gray for contact info area */
   border-radius: 10px;
   color: #c9e3ea;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -627,19 +602,11 @@ nav {
     /*margin-bottom: 20px;*/
   }
   .image-box {
-     flex: 1; /* Take up 50% of the container */
-    /*margin: 40px;*/
-        padding: 50px; /* Add some padding for spacing */
-   /*     box-sizing: border-box; !* Include padding in the width *!*/
-   /*     width: 300px;*/
-   /* border: 1px solid #ccc;*/
+    flex: 1; 
+    padding: 50px; 
+    background-color: #0e0d0d;
+    border-radius: 5px;
 
-   /*margin-right: 20px;*/
-         background-color: #0e0d0d;
-
-  border-radius: 5px;
-  /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/
-  /*    border-left: 2px solid #667379;*/
   }
   .image-box img {
     max-width: 100%;

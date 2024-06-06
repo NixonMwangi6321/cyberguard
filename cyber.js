@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // Function to handle tab navigation and content visibility, including conditional news box display
 function loadContent(tabId) {
   const tabs = document.querySelectorAll('.tab-content');
-  const newsBox = document.getElementById('newsBox');
+  const newsBox = document.getElementById('news-container');
 
   // Hide all tab contents
   tabs.forEach(tab => {
@@ -234,6 +234,7 @@ function loadContent(tabId) {
     newsBox.style.display = 'block';
   }
 }
+
 
 // Set up event listeners for DOM content loaded
 document.addEventListener("DOMContentLoaded", function() {
@@ -299,4 +300,129 @@ document.addEventListener("DOMContentLoaded", function() {
 window.addEventListener('popstate', function(event) {
   window.scrollTo(0, 0);
 });
+
+  // function shouldDisplayNewsBox() {
+  //   // Get the current page URL
+  //   var currentPageURL = window.location.pathname;
+  //    console.log("Current Page URL:", currentPageURL);
+  //
+  //   // Define an array of page URLs where the news box should be displayed
+  //   var pagesToShowNewsBox = ['/market', '/profile']; // Add or remove page URLs as needed
+  //
+  //   // Check if the current page URL is in the array of pages where the news box should be displayed
+  //   return pagesToShowNewsBox.includes(currentPageURL);
+  // }
+  //
+  // // Function to show or hide the news box based on whether it should be displayed
+  // function toggleNewsBox() {
+  //   var newsContainer = document.getElementById("news-container");
+  //
+  //   // Check if the news box should be displayed on the current page
+  //   if (shouldDisplayNewsBox()) {
+  //     newsContainer.style.display = "block"; // Show the news box
+  //   } else {
+  //     newsContainer.style.display = "none"; // Hide the news box
+  //   }
+  // }
+  //
+  // // Call the toggleNewsBox function when the page loads
+  // window.onload = function() {
+  //   toggleNewsBox();
+  // };
+  function getCurrentSection() {
+    return window.location.hash.substring(1); // Remove '#' from the hash
+  }
+  //
+  // // Function to show or hide the news box based on the current section
+  function toggleNewsBox() {
+    var currentSection = getCurrentSection();
+    var newsContainer = document.getElementById("news-container");
+
+    // Check if the current section is one where the news box should be displayed
+    if ((currentSection === "profile" || currentSection === "ourproduct" || currentSection === "market")) {
+      newsContainer.style.display = "block"; // Show the news box
+    } else {
+      newsContainer.style.display = "none"; // Hide the news box
+    }
+  }
+
+  // Call the toggleNewsBox function when the page loads and when the hash changes
+   window.onload = function() {
+    toggleNewsBox();
+  };
+
+  // Call toggleNewsBox() when the hash (section identifier) changes
+  window.onhashchange = function() {
+    toggleNewsBox();
+  };
+
+  // Animation for the headings
+  const headings = document.querySelectorAll('.heading');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Optionally stop observing after the animation has been triggered
+      }
+    });
+  });
+
+  headings.forEach(heading => {
+    observer.observe(heading);
+  });
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const body = document.body;
+        const themeToggle = document.getElementById('theme-switch');
+  // Check for saved user preference, if any, on load of the website
+  const savedTheme = localStorage.getItem('theme') || 'light-theme';
+  body.classList.add(savedTheme);
+
+        const userPreference = localStorage.getItem('theme');
+
+        // Set the theme based on user preference or default to dark theme
+        if (userPreference === 'light-theme') {
+            body.classList.remove('dark-theme');
+            body.classList.add('light-theme');
+            themeToggle.classList.remove('dark');
+        } else {
+            body.classList.add('dark-theme');
+            themeToggle.classList.add('dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            // Toggle between dark and light theme
+            if (body.classList.contains('light-theme')) {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+                themeToggle.classList.add('dark');
+                localStorage.setItem('theme', 'dark-theme');
+            } else {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+                themeToggle.classList.remove('dark');
+                localStorage.setItem('theme', 'light-theme');
+            }
+  });
+
+  // Animation for the headings
+  const headings = document.querySelectorAll('.heading');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Optionally stop observing after the animation has been triggered
+      }
+    });
+  });
+
+  headings.forEach(heading => {
+    observer.observe(heading);
+  });
+});
+
+
+
+
 

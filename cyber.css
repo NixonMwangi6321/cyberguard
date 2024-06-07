@@ -935,7 +935,8 @@ text-align: center;color: #007bff
     background-color: #121212;
   color: #ffffff;
 
-}        .theme-switch-icon {
+}        
+.theme-switch-icon {
             width: 30px;
             height: 30px;
           background: linear-gradient(to bottom right, #ffd700,#a37a00);
@@ -954,7 +955,100 @@ text-align: center;color: #007bff
         }
 
         .theme-switch-icon.dark:before {
-            content: "\263E"; /* Crescent moon symbol */
+            content: "\263E"; 
+          }
+          .footer {
+            background-color: #000; /* Black background */
+            color: #fff; /* White text color */
+            padding: 20px 0;
         }
-
-
+        
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-section {
+            flex: 1;
+            padding: 10px;
+            min-width: 200px;
+            text-align: center;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 15px;
+            color: #fff; /* White text color for headers */
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            margin: 5px 0;
+            color: #ccc; /* Light gray text color for links and paragraphs */
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-section.logos {
+            text-align: center;
+        }
+        
+        .footer-section .partnership-text {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #fff; /* White text color for partnership text */
+        }
+        
+        .footer-section .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            overflow: hidden; /* Ensure logos don't overflow the container */
+            position: relative; /* For positioning the logos */
+            height: 150px; /* Set a fixed height to prevent footer resizing */
+        }
+        
+        .footer-section .logo-container a {
+            animation: moveLogo 5s infinite alternate; /* Apply animation to logos */
+        }
+        
+        .footer-section .logo-container a:nth-child(2) {
+            animation-delay: 2.5s; /* Delay second logo to create staggered effect */
+        }
+        
+        .footer-section .logo-container a img {
+            max-width: 100px;
+            height: auto;
+        }
+        
+        @keyframes moveLogo {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(20px);
+            }
+        }
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+   
+      
+.social-icon i {
+  font-size: 24px;
+  color: #ccc; 
+}
+      
+.social-icon:hover i {
+  color: #fff;
+}
+      
